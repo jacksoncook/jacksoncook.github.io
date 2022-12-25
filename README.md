@@ -15,3 +15,7 @@
 
 ## Resources
 - https://github.com/gitname/react-gh-pages
+
+### Notes
+- Development code will be on the `main` branch
+- Deployed code is on the `gh-pages` branch
