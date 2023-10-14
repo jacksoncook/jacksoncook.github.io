@@ -25,6 +25,22 @@ function App() {
         >
           Youtube
         </a>
+        <a
+          className="App-link"
+          href="https://music.apple.com/us/artist/jacksonian/1681131702"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Apple Music
+        </a>
+        <a
+          className="App-link"
+          href="https://www.amazon.com/music/player/artists/B0C1S65ZL7/jacksonian"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Amazon Music
+        </a>
       </header>
     </div>
   );
