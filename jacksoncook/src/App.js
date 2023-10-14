@@ -50,10 +50,15 @@ function App() {
       <header className="App-header">
         <img src={chewflocka} className="App-logo" alt="photo_of_jackson" />
         <p>
-          Jacksonian
+          Welcome to Jacksonian's personal site.
         </p>
-        <ListOfLinks list={streamingPlatforms} />
-        <ListOfLinks list={tennisVideos} />
+        <p>
+          From this port you can quickly browse many things Jacksonian enjoys.
+        </p>
+        <div className="HoriztonalContent">
+          <ListOfLinks list={streamingPlatforms} title="Streaming Platforms" />
+          <ListOfLinks list={tennisVideos} title="Tennis Videos" />
+        </div>
       </header>
     </div>
   );

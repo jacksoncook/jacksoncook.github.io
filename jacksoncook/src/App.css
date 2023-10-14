@@ -22,3 +22,6 @@
   text-decoration: none;
 }
 
+.HoriztonalContent {
+    justify-content: center;
+}
