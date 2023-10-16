@@ -1,16 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c99db7a.css",
-    "main.js": "/static/js/main.e5e3534c.js",
+    "main.css": "/static/css/main.08aac39b.css",
+    "main.js": "/static/js/main.0dd9f8c3.js",
     "static/js/787.7e493101.chunk.js": "/static/js/787.7e493101.chunk.js",
-    "static/media/chewflocka.png": "/static/media/chewflocka.b0631dab2020b3d45447.png",
+    "static/media/album_cover_skeleton.jpg": "/static/media/album_cover_skeleton.b1610a28789d6770a05d.jpg",
+    "static/media/album_cover_lost.jpg": "/static/media/album_cover_lost.25fd128d583f589f2ade.jpg",
+    "static/media/album_cover_roti.jpg": "/static/media/album_cover_roti.0d5ef026145d27b6480e.jpg",
+    "static/media/album_cover_bitchin_hour.jpg": "/static/media/album_cover_bitchin_hour.ea35e990b77078cea5cf.jpg",
+    "static/media/album_cover_fotp.jpg": "/static/media/album_cover_fotp.ea951eff9e1cfd8a8001.jpg",
+    "static/media/album_cover_ocarina_dude.jpg": "/static/media/album_cover_ocarina_dude.1efd0414affa699df62c.jpg",
+    "static/media/album_cover_chewflocka.jpg": "/static/media/album_cover_chewflocka.49f024bf8a62602edfd8.jpg",
     "index.html": "/index.html",
-    "main.2c99db7a.css.map": "/static/css/main.2c99db7a.css.map",
-    "main.e5e3534c.js.map": "/static/js/main.e5e3534c.js.map",
+    "main.08aac39b.css.map": "/static/css/main.08aac39b.css.map",
+    "main.0dd9f8c3.js.map": "/static/js/main.0dd9f8c3.js.map",
     "787.7e493101.chunk.js.map": "/static/js/787.7e493101.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c99db7a.css",
-    "static/js/main.e5e3534c.js"
+    "static/css/main.08aac39b.css",
+    "static/js/main.0dd9f8c3.js"
   ]
 }
