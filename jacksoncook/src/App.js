@@ -3,8 +3,11 @@ import './App.css';
 import ListOfLinks from './components/ListOfLinks.js';
 import Album from './components/Album.js';
 import * as constants from './Constants.js';
+import React, { useState } from 'react';
+import ReactModal from 'react-modal';
 
 function App() {
+const [modalVisible, setModalVisible] = useState(false);
   return (
     <div className="App">
       <div id="welcome" className="App-contentbar">

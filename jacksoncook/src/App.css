@@ -15,8 +15,6 @@
   color: black;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  align-text: center;
   display: flex;
 }
 
@@ -43,6 +41,7 @@
 }
 
 .App-statement {
+  text-align: center;
   margin: 3px 5px;
 }
 
