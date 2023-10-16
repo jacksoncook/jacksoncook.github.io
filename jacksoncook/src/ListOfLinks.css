@@ -1,9 +1,26 @@
 .ListOfLinks-container {
-  float: left;
   justify-content: center;
   text-align: center;
+  color: #fafcf8;
+  height: 100%;
+  padding-right: 5px;
 }
-.PlainList {
+
+.ListOfLinks-list {
+  width: 40vw;
   list-style-type: none;
   padding: 0;
+}
+
+.ListOfLinks-listitem {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+}
+
+
+.ListOfLinks-link {
+  color: #fabd35;
+  text-decoration: none;
 }

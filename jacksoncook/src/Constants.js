@@ -8,7 +8,7 @@ export const TENNIS_VIDEOS = [
     "link": "https://www.youtube.com/watch?v=qEF6g-4M0ok",
   },
   {   
-    "name": "2023/01/18 Singles Casual vs. 4.0",
+    "name": "2023/01/18 Singles Casual",
     "link": "https://www.youtube.com/watch?v=PS-PEf6kgW4",
   },  
   {   
@@ -37,5 +37,12 @@ export const STREAMING_PLATFORMS = [
   {
     "name": "Amazon Music",
     "link": "https://www.amazon.com/music/player/artists/B0C1S65ZL7/jacksonian",
+  },
+]
+
+export const WRITTEN_PIECES = [
+  {
+    "name": "Community for Remote Teams",
+    "link": "https://medium.com/@jacksonion/community-for-remote-teams-ba44b727a49d",
   },
 ]
