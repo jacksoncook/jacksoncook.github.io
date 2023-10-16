@@ -1,10 +1,10 @@
-import foti from './album_cover_fotp.jpg';
-import roti from './album_cover_roti.jpg';
-import chewflocka from './album_cover_chewflocka.jpg';
-import skeleton from './album_cover_skeleton.jpg';
-import ocarina_dude from './album_cover_ocarina_dude.jpg';
-import bitchin_hour from './album_cover_bitchin_hour.jpg';
-import lost from './album_cover_lost.jpg';
+import foti from './images/album_cover_fotp.jpg';
+import roti from './images/album_cover_roti.jpg';
+import chewflocka from './images/album_cover_chewflocka.jpg';
+import skeleton from './images/album_cover_skeleton.jpg';
+import ocarina_dude from './images/album_cover_ocarina_dude.jpg';
+import bitchin_hour from './images/album_cover_bitchin_hour.jpg';
+import lost from './images/album_cover_lost.jpg';
 
 export const TENNIS_VIDEOS = [
   {   
