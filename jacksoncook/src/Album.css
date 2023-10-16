@@ -1,0 +1,13 @@
+.Album-container {
+  height: 50vmin;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.Album-album {
+  display: inline-block;
+}
+
+.Album-image {
+  height: 50vmin;
+}

@@ -23,10 +23,23 @@
 .App-split {
   border-bottom: dotted;
   font-weight: bold;
-  color: white;
-  text-align: center;
   width: 100vw;
+  text-align: center;
+}
+
+#Content {
+  color: #fafcf8;
   background-color: #4985fe;
+}
+
+#Lyrics {
+  color: block;
+  background-color: #fafcf8;
+}
+
+#albums {
+  white-space: nowrap;
+  height: 50vh;
 }
 
 .App-statement {
@@ -38,11 +51,14 @@
   display: flex;
   height: 50vh;
   width: 100vw;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
 
 #welcome {
   height: 50vmin;
+  white-space: normal;
 }
 
 #links {

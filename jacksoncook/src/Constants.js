@@ -1,3 +1,11 @@
+import foti from './album_cover_fotp.jpg';
+import roti from './album_cover_roti.jpg';
+import chewflocka from './album_cover_chewflocka.jpg';
+import skeleton from './album_cover_skeleton.jpg';
+import ocarina_dude from './album_cover_ocarina_dude.jpg';
+import bitchin_hour from './album_cover_bitchin_hour.jpg';
+import lost from './album_cover_lost.jpg';
+
 export const TENNIS_VIDEOS = [
   {   
     "name": "2023/07/31 Singles R128 1st Set",
@@ -44,5 +52,43 @@ export const WRITTEN_PIECES = [
   {
     "name": "Community for Remote Teams",
     "link": "https://medium.com/@jacksonion/community-for-remote-teams-ba44b727a49d",
+  },
+]
+
+export const SONG_LYRICS = [
+  {
+    "title": "Ocarina Dude",
+    "album_cover_path": ocarina_dude,
+    "lyrics": "",
+  },
+  {
+    "title": "Rhythm of the Island",
+    "album_cover_path": roti,
+    "lyrics": "",
+  },
+  {
+    "title": "Friends of the Past",
+    "album_cover_path": foti,
+    "lyrics": "",
+  },
+  {
+    "title": "Mr. Chewflocka",
+    "album_cover_path": chewflocka,
+    "lyrics": "",
+  },
+  {
+    "title": "Skeleton",
+    "album_cover_path": skeleton,
+    "lyrics": "",
+  },
+  {
+    "title": "Bitchin' Hour",
+    "album_cover_path": bitchin_hour,
+    "lyrics": "",
+  },
+  {
+    "title": "Lost",
+    "album_cover_path": lost,
+    "lyrics": "",
   },
 ]

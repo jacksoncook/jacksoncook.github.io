@@ -1,6 +1,7 @@
-import chewflocka from './chewflocka.png';
+import chewflocka from './album_cover_chewflocka.jpg';
 import './App.css';
 import ListOfLinks from './ListOfLinks.js';
+import Album from './Album.js';
 import * as constants from './Constants.js';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="App-split">
+      <div id="Content" className="App-split">
         Content Links
       </div>
       <div id="links" className="App-contentbar">
@@ -26,7 +27,11 @@ function App() {
         <ListOfLinks list={constants.TENNIS_VIDEOS} title="Tennis Videos" />
         <ListOfLinks list={constants.WRITTEN_PIECES} title="Written Pieces" />
       </div>
-      <div className="App-contentbar">
+      <div id="Lyrics" className="App-split">
+        Songs & Lyrics
+      </div>
+      <div id="albums" className="App-contentbar">
+        <Album list={constants.SONG_LYRICS} />
       </div>
     </div>
   );
