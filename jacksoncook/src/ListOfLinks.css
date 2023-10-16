@@ -1,8 +1,9 @@
 .ListOfLinks-container {
-    float: left;
-    justify-content: center;
+  float: left;
+  justify-content: center;
+  text-align: center;
 }
 .PlainList {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
