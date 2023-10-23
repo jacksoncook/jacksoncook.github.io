@@ -29,6 +29,7 @@ const [modalVisible, setModalVisible] = useState(false);
         <ListOfLinks list={constants.STREAMING_PLATFORMS} title="Streaming Platforms" />
         <ListOfLinks list={constants.TENNIS_VIDEOS} title="Tennis Videos" />
         <ListOfLinks list={constants.WRITTEN_PIECES} title="Written Pieces" />
+        <ListOfLinks list={constants.SOCIAL_MEDIA} title="Social Media" />
       </div>
       <div id="Lyrics" className="App-split">
         Songs

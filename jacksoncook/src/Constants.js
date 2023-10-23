@@ -56,6 +56,21 @@ export const WRITTEN_PIECES = [
   },
 ]
 
+export const SOCIAL_MEDIA = [
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com/jacksonBcookin",
+  },
+  {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/in/jackson-cook/",
+  },
+  {
+    "name": "Facebook",
+    "link": "https://www.facebook.com/jacksonian.music",
+  },
+]
+
 const OCARINA_DUDE_LYRICS = "~Jacksonian~\n\nYoung professional yuppie\nPet yo' puppy\nHit the gym everyday with my duffie\n\nI should feel lucky\nTo have money\nBut I don’t\nI am ungrateful fuck me\n\nAlways hungry\nCan’t feel comfy\nChasing dreams like cumulus so puffy\n\nHaters can’t snuff me\nPolice don’t cuff me\nPlay my ocarina so my music can drug me\n\nEvery day trying to improve\nThat is my signature move\nReadin’, skiiin’, trainin’, playin’, workin’ on communication\n\nWaitin’ for that day\nOn my bed I lay\nWhat I’m not doing my thoughts don’t say\n\nDistract me, attack me, you will never crack me\nI am a man with a plan outran the lands of painting tomato cans\n\nManufacturing the happenings avoiding my own saddening\nEverytime I start unravelling I keep on paddling\nIn my mind these thoughts keep rattling\nRattatattatattatatattling"
 
 const ROTI_LYRICS = "~Jacksonian~\n\nHello from Hawaii\nAmongst the chickens!\n\nSun goes up\nSun goes down\nThat’s called the sunrise and sunset\n\nBall of fire\nNever tires (never tires)\nNever ending sunrise and sunset\n\nTide comes in\nTide goes out\nThat’s the motion of the ocean\n\nAlways emotional\nComes the pull\nThat’s the motion of the ocean\n\nMeet new friends\nLearn about\nThat’s the rhythm of the island\n\nFeelings come\nFeelings go\nThat’s the rhythm of the I (chicken)"
@@ -95,12 +110,12 @@ export const SONG_LYRICS = [
   {
     "title": "Bitchin' Hour",
     "album_cover_path": bitchin_hour,
-    "lyrics": "",
+    "lyrics": "Coming Soon ;)",
   },
   {
     "title": "Lost",
     "album_cover_path": lost,
-    "lyrics": "",
+    "lyrics": "Coming Soon ;}",
   },
 ]
 
