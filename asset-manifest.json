@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1c03fad6.css",
-    "main.js": "/static/js/main.54c79d5c.js",
+    "main.css": "/static/css/main.ec1dd106.css",
+    "main.js": "/static/js/main.9a5e4102.js",
     "static/js/787.7e493101.chunk.js": "/static/js/787.7e493101.chunk.js",
     "static/media/album_cover_skeleton.jpg": "/static/media/album_cover_skeleton.b1610a28789d6770a05d.jpg",
     "static/media/album_cover_lost.jpg": "/static/media/album_cover_lost.25fd128d583f589f2ade.jpg",
@@ -12,12 +12,12 @@
     "static/media/album_cover_chewflocka.jpg": "/static/media/album_cover_chewflocka.49f024bf8a62602edfd8.jpg",
     "static/media/OcarinaDude.txt": "/static/media/OcarinaDude.453fefc4e1e3e2c5a8a1.txt",
     "index.html": "/index.html",
-    "main.1c03fad6.css.map": "/static/css/main.1c03fad6.css.map",
-    "main.54c79d5c.js.map": "/static/js/main.54c79d5c.js.map",
+    "main.ec1dd106.css.map": "/static/css/main.ec1dd106.css.map",
+    "main.9a5e4102.js.map": "/static/js/main.9a5e4102.js.map",
     "787.7e493101.chunk.js.map": "/static/js/787.7e493101.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c03fad6.css",
-    "static/js/main.54c79d5c.js"
+    "static/css/main.ec1dd106.css",
+    "static/js/main.9a5e4102.js"
   ]
 }
