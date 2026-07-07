@@ -5,16 +5,17 @@ const STREAMING_PLATFORMS = [
   { name: "Amazon Music", link: "https://www.amazon.com/music/player/artists/B0C1S65ZL7/jacksonian" },
 ];
 
-const TENNIS_PLAYLIST = [
+const VIDEO_PLAYLISTS = [
   { name: "Tennis Playlist", link: "https://www.youtube.com/playlist?list=PLKiPzHDmkJGM" },
+  { name: "Lifting Playlist", link: "https://www.youtube.com/playlist?list=PLBI6Tkq8_ZEU" },
 ];
 
 const OLD_TENNIS_VIDEOS = [
-  { name: "2023/07/31 Singles R128 1st Set", link: "https://www.youtube.com/watch?v=SFmWbVKMc5A" },
-  { name: "2023/07/31 Singles R128 2nd Set", link: "https://www.youtube.com/watch?v=qEF6g-4M0ok" },
-  { name: "2023/01/18 Singles Casual", link: "https://www.youtube.com/watch?v=PS-PEf6kgW4" },
-  { name: "2023/01/28 Singles (Pickleball)", link: "https://www.youtube.com/watch?v=NXcOaojsPIk" },
-  { name: "2023/01/16 Doubles Casual", link: "https://www.youtube.com/watch?v=PJTQmBBEY4A" },
+  { name: "7/31/23 – Singles R128, Set 1", link: "https://www.youtube.com/watch?v=SFmWbVKMc5A" },
+  { name: "7/31/23 – Singles R128, Set 2", link: "https://www.youtube.com/watch?v=qEF6g-4M0ok" },
+  { name: "1/18/23 – Casual Singles", link: "https://www.youtube.com/watch?v=PS-PEf6kgW4" },
+  { name: "1/28/23 – Pickleball", link: "https://www.youtube.com/watch?v=NXcOaojsPIk" },
+  { name: "1/16/23 – Casual Doubles", link: "https://www.youtube.com/watch?v=PJTQmBBEY4A" },
 ];
 
 const WRITTEN_PIECES = [
@@ -30,7 +31,7 @@ const SOCIAL_MEDIA = [
 
 const LINK_GROUPS = [
   { title: "Find my music", items: STREAMING_PLATFORMS },
-  { title: "Video content", items: TENNIS_PLAYLIST },
+  { title: "Video content", items: VIDEO_PLAYLISTS },
   { title: "Old Tennis Videos", items: OLD_TENNIS_VIDEOS },
   { title: "Written Pieces", items: WRITTEN_PIECES },
   { title: "Social Media", items: SOCIAL_MEDIA },
