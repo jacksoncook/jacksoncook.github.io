@@ -1,21 +1,13 @@
-## Prerequisites
-- Node
-- npm
-- gh-pages `npm install gh-pages --save-dev`
+Personal site for jacksoncook.github.io — plain HTML/CSS/JS, no build step.
 
-## Dev Process
+## Structure
+- `index.html`, `styles.css`, `script.js` — the main site
+- `images/` — photos, album covers, icons
+- `coopr/index.html` — standalone landing + privacy page for the Coopr app
 
-### Making Updates
-- Navigate to `(root)/jacksoncook`
-- Run `npm start`
-- Updates will be reflected live at localhost:3000
+## Making updates
+- Edit the files directly.
+- Preview locally with any static server, e.g. `python3 -m http.server` from the repo root, then visit `localhost:8000`.
 
-### Deployment
-- Run `npm run deploy -- -m "<MESSAGE>"`
-
-## Resources
-- https://github.com/gitname/react-gh-pages
-
-### Notes
-- Development code will be on the `main` branch
-- Deployed code is on the `gh-pages` branch
+## Deployment
+GitHub Pages serves directly from the `main` branch root — just commit and push, no build/deploy step required.
