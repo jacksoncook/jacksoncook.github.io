@@ -5,7 +5,11 @@ const STREAMING_PLATFORMS = [
   { name: "Amazon Music", link: "https://www.amazon.com/music/player/artists/B0C1S65ZL7/jacksonian" },
 ];
 
-const TENNIS_VIDEOS = [
+const TENNIS_PLAYLIST = [
+  { name: "Tennis Playlist (Youtube)", link: "https://www.youtube.com/playlist?list=PLKiPzHDmkJGM" },
+];
+
+const OLD_TENNIS_VIDEOS = [
   { name: "2023/07/31 Singles R128 1st Set", link: "https://www.youtube.com/watch?v=SFmWbVKMc5A" },
   { name: "2023/07/31 Singles R128 2nd Set", link: "https://www.youtube.com/watch?v=qEF6g-4M0ok" },
   { name: "2023/01/18 Singles Casual", link: "https://www.youtube.com/watch?v=PS-PEf6kgW4" },
@@ -15,6 +19,7 @@ const TENNIS_VIDEOS = [
 
 const WRITTEN_PIECES = [
   { name: "Community for Remote Teams", link: "https://medium.com/@jacksonion/community-for-remote-teams-ba44b727a49d" },
+  { name: "Fake Accounts: The Persistent Virus of Today", link: "https://medium.com/@jacksonion/fake-accounts-the-persistent-virus-of-today-40947aac9ded" },
 ];
 
 const SOCIAL_MEDIA = [
@@ -25,7 +30,8 @@ const SOCIAL_MEDIA = [
 
 const LINK_GROUPS = [
   { title: "Streaming Platforms", items: STREAMING_PLATFORMS },
-  { title: "Tennis Videos", items: TENNIS_VIDEOS },
+  { title: "Tennis Playlist", items: TENNIS_PLAYLIST },
+  { title: "Old Tennis Videos", items: OLD_TENNIS_VIDEOS },
   { title: "Written Pieces", items: WRITTEN_PIECES },
   { title: "Social Media", items: SOCIAL_MEDIA },
 ];
