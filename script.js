@@ -101,6 +101,9 @@ function renderAlbums() {
   const modalLyrics = document.getElementById("modal-lyrics");
 
   for (const song of SONG_LYRICS) {
+    const figure = document.createElement("figure");
+    figure.className = "album";
+
     const button = document.createElement("button");
     button.type = "button";
     button.className = "album-trigger";
@@ -117,7 +120,13 @@ function renderAlbums() {
       modal.showModal();
     });
 
-    container.appendChild(button);
+    const caption = document.createElement("figcaption");
+    caption.className = "album-caption";
+    caption.textContent = song.title;
+
+    figure.appendChild(button);
+    figure.appendChild(caption);
+    container.appendChild(figure);
   }
 
   document.getElementById("modal-close").addEventListener("click", () => modal.close());
@@ -126,5 +135,30 @@ function renderAlbums() {
   });
 }
 
+function initScrollReveal() {
+  const targets = document.querySelectorAll(".reveal");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    targets.forEach((el) => el.classList.add("in-view"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.15 }
+  );
+
+  targets.forEach((el) => observer.observe(el));
+}
+
 renderLinkGroups();
 renderAlbums();
+initScrollReveal();

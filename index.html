@@ -9,6 +9,9 @@
   <link rel="apple-touch-icon" href="images/icon-180.png">
   <link rel="manifest" href="manifest.json">
   <title>Jacksonian</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,22 +25,33 @@
   <main id="main">
     <header class="hero">
       <img src="images/album_cover_chewflocka.jpg" class="hero-logo" alt="Jackson Cook">
+      <p class="hero-kicker">Jacksonian</p>
       <p class="hero-statement">
         Ahoy!<br>
         From this port you can quickly browse many things Jacksonian enjoys&hellip;
       </p>
     </header>
 
-    <h2 id="links" class="section-divider">Content Links</h2>
-    <section class="links-band" aria-label="Content links">
+    <section id="links" class="links-band reveal" aria-label="Content links">
+      <div class="section-heading">
+        <p class="section-kicker">Explore</p>
+        <h2>Content Links</h2>
+      </div>
       <div id="link-groups" class="link-groups"></div>
     </section>
 
-    <h2 id="songs" class="section-divider">Songs</h2>
-    <section class="albums-band" aria-label="Songs">
+    <section id="songs" class="albums-band reveal" aria-label="Songs">
+      <div class="section-heading">
+        <p class="section-kicker">Listen</p>
+        <h2>Songs</h2>
+      </div>
       <div id="albums" class="albums"></div>
     </section>
   </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Jackson Cook &middot; made with a little chaos</p>
+  </footer>
 
   <dialog id="lyrics-modal" class="lyrics-modal">
     <button type="button" id="modal-close" class="modal-close" aria-label="Close">&times;</button>
