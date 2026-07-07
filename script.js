@@ -6,7 +6,7 @@ const STREAMING_PLATFORMS = [
 ];
 
 const TENNIS_PLAYLIST = [
-  { name: "Tennis Playlist (Youtube)", link: "https://www.youtube.com/playlist?list=PLKiPzHDmkJGM" },
+  { name: "Tennis Playlist", link: "https://www.youtube.com/playlist?list=PLKiPzHDmkJGM" },
 ];
 
 const OLD_TENNIS_VIDEOS = [
@@ -30,7 +30,7 @@ const SOCIAL_MEDIA = [
 
 const LINK_GROUPS = [
   { title: "Find my music", items: STREAMING_PLATFORMS },
-  { title: "Tennis Playlist", items: TENNIS_PLAYLIST },
+  { title: "Video content", items: TENNIS_PLAYLIST },
   { title: "Old Tennis Videos", items: OLD_TENNIS_VIDEOS },
   { title: "Written Pieces", items: WRITTEN_PIECES },
   { title: "Social Media", items: SOCIAL_MEDIA },
