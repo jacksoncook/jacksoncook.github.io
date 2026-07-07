@@ -100,15 +100,6 @@ body {
   color: var(--blue-dark);
 }
 
-.hero-statement {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.5;
-  max-width: 32em;
-  margin: 0;
-  color: var(--ink);
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -275,7 +266,9 @@ body {
 }
 
 .lyrics-modal {
-  position: relative;
+  position: fixed;
+  inset: 0;
+  margin: auto;
   border: none;
   border-radius: 20px;
   padding: 32px 36px 36px;
@@ -363,10 +356,6 @@ body {
 @media (max-width: 480px) {
   .hero {
     padding: 64px 20px 56px;
-  }
-
-  .hero-statement {
-    font-size: 1.2rem;
   }
 
   .section-heading h2 {

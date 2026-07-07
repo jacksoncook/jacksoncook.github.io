@@ -29,7 +29,7 @@ const SOCIAL_MEDIA = [
 ];
 
 const LINK_GROUPS = [
-  { title: "Streaming Platforms", items: STREAMING_PLATFORMS },
+  { title: "Find my music", items: STREAMING_PLATFORMS },
   { title: "Tennis Playlist", items: TENNIS_PLAYLIST },
   { title: "Old Tennis Videos", items: OLD_TENNIS_VIDEOS },
   { title: "Written Pieces", items: WRITTEN_PIECES },
