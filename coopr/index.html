@@ -3,65 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coopr — the flock app that never loses your data</title>
-<meta name="description" content="Track eggs, your flock, and what your eggs really cost. Two-tap logging, iCloud backup, every species welcome. For backyard chicken, duck, and quail keepers.">
+<title>Coopr | Egg Tracking App for Backyard Chickens</title>
+<meta name="description" content="Coopr is a free egg tracking app for backyard chicken, duck, and quail keepers. Log daily collections in two taps, follow laying trends, and see your true cost per egg. No account required.">
+<link rel="canonical" href="https://jacksoncook.github.io/coopr/">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Coopr">
+<meta property="og:url" content="https://jacksoncook.github.io/coopr/">
+<meta property="og:title" content="Coopr | Egg Tracking App for Backyard Chickens">
+<meta property="og:description" content="Log daily egg collections, follow laying trends, and see your true cost per egg. For backyard chicken, duck, and quail keepers.">
+<meta property="og:image" content="https://jacksoncook.github.io/coopr/img/hero-eggs.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Coopr | Egg Tracking App for Backyard Chickens">
+<meta name="twitter:description" content="Log daily egg collections, follow laying trends, and see your true cost per egg. For backyard chicken, duck, and quail keepers.">
+<meta name="twitter:image" content="https://jacksoncook.github.io/coopr/img/hero-eggs.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Coopr - Egg Tracking",
+  "url": "https://jacksoncook.github.io/coopr/",
+  "operatingSystem": "iOS 17.0 or later",
+  "applicationCategory": "LifestyleApplication",
+  "downloadUrl": "https://apps.apple.com/app/coopr-egg-tracking/id6780037275",
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Coopr Plus (yearly)", "price": "14.99", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Coopr Plus (lifetime)", "price": "29.99", "priceCurrency": "USD" }
+  ]
+}
+</script>
+
 <style>
   :root { --orange:#E8632C; --light:#FFA94D; --cream:#FFF6E5; --ink:#2B1D12; }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; }
-  .hero { background:linear-gradient(180deg,var(--light),var(--orange)); color:#fff; text-align:center; padding:64px 24px 72px; }
-  .hero svg { width:120px; height:120px; border-radius:27px; box-shadow:0 8px 24px rgba(0,0,0,.25); }
-  .hero h1 { font-size:2.4rem; margin:20px 0 8px; }
-  .hero p.tag { font-size:1.25rem; opacity:.95; max-width:540px; margin:0 auto; }
-  .badge { display:inline-block; margin-top:28px; background:#000; color:#fff; padding:12px 28px; border-radius:12px; text-decoration:none; font-weight:600; }
-  section { max-width:760px; margin:0 auto; padding:48px 24px; }
+  html { overflow-x:hidden; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; overflow-x:hidden; }
+  img { max-width:100%; height:auto; display:block; }
+  .hero { background:linear-gradient(180deg,var(--light),var(--orange)); color:#fff; padding:56px 24px 64px; }
+  .hero-inner { max-width:980px; margin:0 auto; display:flex; align-items:center; gap:48px; flex-wrap:wrap; }
+  .hero-copy { flex:1 1 360px; min-width:0; }
+  .hero-copy .brand { display:flex; align-items:center; gap:10px; margin-bottom:20px; opacity:.9; }
+  .hero-copy .brand svg { width:32px; height:32px; border-radius:8px; }
+  .hero-copy .brand span { font-weight:700; letter-spacing:.02em; }
+  .hero h1 { font-size:2.3rem; line-height:1.15; margin-bottom:14px; }
+  .hero p.tag { font-size:1.1rem; opacity:.95; max-width:480px; margin-bottom:24px; }
+  .badge { display:inline-block; background:#000; color:#fff; padding:12px 28px; border-radius:12px; text-decoration:none; font-weight:600; }
+  .hero-shot { flex:0 1 320px; min-width:0; text-align:center; }
+  .hero-shot img { width:100%; max-width:300px; border-radius:22px; box-shadow:0 20px 48px rgba(0,0,0,.35); }
+  section { max-width:860px; margin:0 auto; padding:48px 24px; }
   h2 { font-size:1.6rem; margin-bottom:16px; color:var(--orange); }
   .features { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
   .card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
   .card h3 { font-size:1.05rem; margin-bottom:6px; }
   .card p { font-size:.95rem; color:#5a4a3a; }
+  .plus-tag { display:inline-block; font-size:.7rem; font-weight:700; color:var(--orange); background:#FFE7CF; border-radius:6px; padding:2px 6px; margin-left:6px; vertical-align:middle; }
+  .shots { display:flex; gap:24px; flex-wrap:wrap; justify-content:center; }
+  .shots figure { flex:1 1 280px; min-width:0; max-width:340px; }
+  .shots img { width:100%; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.12); display:block; }
+  .shots figcaption { text-align:center; font-size:.9rem; color:#5a4a3a; margin-top:10px; }
+  table.pricing { width:100%; border-collapse:collapse; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.06); }
+  table.pricing th, table.pricing td { padding:12px 16px; text-align:left; border-bottom:1px solid #F0E2CC; font-size:.95rem; }
+  table.pricing th { background:#FFF0DA; color:var(--orange); }
+  table.pricing td.check { text-align:center; }
+  table.pricing tr:last-child td { border-bottom:none; }
+  .faq details { background:#fff; border-radius:12px; padding:14px 18px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,.05); }
+  .faq summary { font-weight:600; cursor:pointer; }
+  .faq p { margin-top:8px; font-size:.95rem; color:#5a4a3a; }
+  .cta-band { background:var(--orange); color:#fff; text-align:center; padding:48px 24px; }
+  .cta-band h2 { color:#fff; }
+  .cta-band .badge { background:#000; margin-top:8px; }
   footer { text-align:center; padding:32px; font-size:.85rem; color:#8a755f; }
   .privacy p, .support p { margin-bottom:12px; }
   a { color:var(--orange); }
+  @media (max-width:640px){
+    .hero-inner{ flex-direction:column; text-align:center; }
+    .hero-copy, .hero-shot { flex:none; width:100%; }
+    .hero p.tag{ margin-left:auto; margin-right:auto; }
+  }
 </style>
 </head>
 <body>
 
 <div class="hero">
-  <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coopr icon">
-    <defs>
-      <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#FFA94D"/><stop offset="100%" stop-color="#E8632C"/>
-      </linearGradient>
-      <linearGradient id="egg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#FFFDF7"/><stop offset="100%" stop-color="#FFF0D9"/>
-      </linearGradient>
-    </defs>
-    <rect width="1024" height="1024" rx="180" fill="url(#bg)"/>
-    <ellipse cx="512" cy="852" rx="300" ry="48" fill="#000" opacity=".12"/>
-    <path d="M512 150C680 150 790 390 790 580C790 750 666 868 512 868C358 868 234 750 234 580C234 390 344 150 512 150Z" fill="url(#egg)"/>
-    <g fill="#F2842B">
-      <rect x="382" y="600" width="64" height="120" rx="20"/>
-      <rect x="480" y="540" width="64" height="180" rx="20"/>
-      <rect x="578" y="470" width="64" height="250" rx="20"/>
-    </g>
-  </svg>
-  <h1>Coopr</h1>
-  <p class="tag">The flock app that never loses your data. Eggs, birds, and what your eggs <em>really</em> cost.</p>
-  <a class="badge" href="https://apps.apple.com/app/coopr-egg-tracking/id6780037275">Download on the App&nbsp;Store</a>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="brand">
+        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Coopr icon">
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFA94D"/><stop offset="100%" stop-color="#E8632C"/>
+            </linearGradient>
+            <linearGradient id="egg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#FFFDF7"/><stop offset="100%" stop-color="#FFF0D9"/>
+            </linearGradient>
+          </defs>
+          <rect width="1024" height="1024" rx="180" fill="url(#bg)"/>
+          <ellipse cx="512" cy="852" rx="300" ry="48" fill="#000" opacity=".12"/>
+          <path d="M512 150C680 150 790 390 790 580C790 750 666 868 512 868C358 868 234 750 234 580C234 390 344 150 512 150Z" fill="url(#egg)"/>
+          <g fill="#F2842B">
+            <rect x="382" y="600" width="64" height="120" rx="20"/>
+            <rect x="480" y="540" width="64" height="180" rx="20"/>
+            <rect x="578" y="470" width="64" height="250" rx="20"/>
+          </g>
+        </svg>
+        <span>Coopr</span>
+      </div>
+      <h1>Track your eggs. Understand your flock.</h1>
+      <p class="tag">An egg tracking app for backyard chicken, duck, and quail keepers. Log daily collections, follow laying trends, and understand your costs.</p>
+      <a class="badge" href="https://apps.apple.com/app/coopr-egg-tracking/id6780037275">Download free for iPhone and iPad</a>
+    </div>
+    <div class="hero-shot">
+      <img src="img/hero-eggs.png" width="1000" height="605" alt="Coopr's Eggs tab showing 7 eggs collected today across two coops" loading="eager">
+    </div>
+  </div>
 </div>
 
 <section>
   <h2>Built for real flock keepers</h2>
   <div class="features">
     <div class="card"><h3>🥚 Two-tap egg logging</h3><p>Open, tap, done. Works offline at the coop. No account, no sign-in, ever.</p></div>
-    <div class="card"><h3>☁️ Never lose a record</h3><p>iCloud backup means years of flock history survive phone upgrades, drops, and puddles.</p></div>
-    <div class="card"><h3>📊 Egg economics</h3><p>Track feed and supplies, and see your true cost per egg vs. store prices.</p></div>
-    <div class="card"><h3>🦆 Every species</h3><p>Chickens, ducks, quail, turkeys, geese — multiple coops, per-bird records, health notes.</p></div>
-    <div class="card"><h3>💵 Sell your extras</h3><p>Log egg sales and watch the flock pay for itself.</p></div>
-    <div class="card"><h3>📤 Your data is yours</h3><p>Export everything to CSV anytime. No ads. No tracking.</p></div>
+    <div class="card"><h3>☁️ iCloud sync <span class="plus-tag">optional</span></h3><p>Turn it on in Settings and your history follows you across devices — so a lost or replaced phone doesn't cost you your records. Leave it off and everything stays on this device only.</p></div>
+    <div class="card"><h3>📊 Egg economics <span class="plus-tag">Plus</span></h3><p>Track feed and supply costs and see your true cost per egg vs. store prices.</p></div>
+    <div class="card"><h3>🦆 Every species</h3><p>Chickens, ducks, quail, turkeys, geese — per-bird records and health notes. Multiple coops with Plus.</p></div>
+    <div class="card"><h3>💵 Sales &amp; expense ledger <span class="plus-tag">Plus</span></h3><p>Log egg sales and expenses and watch the flock pay for itself.</p></div>
+    <div class="card"><h3>📤 CSV export &amp; import <span class="plus-tag">Plus</span></h3><p>Get your data out (or back in) anytime. No ads. No tracking, ever.</p></div>
   </div>
 </section>
+
+<section id="screenshots">
+  <h2>See it in action</h2>
+  <div class="shots">
+    <figure>
+      <img src="img/economics.png" width="1000" height="920" alt="Coopr's Stats tab showing a laying chart and egg economics: cost per egg vs. store price" loading="lazy">
+      <figcaption>Know your cost per egg (Plus)</figcaption>
+    </figure>
+    <figure>
+      <img src="img/flock.png" width="1000" height="726" alt="Coopr's Flock tab listing chickens, ducks, and quail by name, breed, and coop" loading="lazy">
+      <figcaption>Every bird, every species, organized</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Free vs. Plus</h2>
+  <table class="pricing">
+    <thead>
+      <tr><th>Feature</th><th>Free</th><th>Plus</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Two-tap egg logging</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Unlimited birds, per-bird records &amp; health notes</td><td class="check">✓</td><td class="check">✓</td></tr>
+      <tr><td>Coops</td><td class="check">1</td><td class="check">Unlimited</td></tr>
+      <tr><td>Egg economics dashboard</td><td class="check">—</td><td class="check">✓</td></tr>
+      <tr><td>Sales &amp; expense ledger</td><td class="check">—</td><td class="check">✓</td></tr>
+      <tr><td>CSV export &amp; import</td><td class="check">—</td><td class="check">✓</td></tr>
+      <tr><td>Price</td><td class="check">Free forever</td><td class="check">$14.99/yr or $29.99 once</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="faq">
+  <h2>Questions</h2>
+  <div class="faq">
+    <details>
+      <summary>Is Coopr free?</summary>
+      <p>Yes. Egg logging, unlimited birds, and one coop are free forever. Coopr Plus ($14.99/yr or $29.99 lifetime) unlocks unlimited coops, the egg economics dashboard, the sales &amp; expense ledger, and CSV export/import.</p>
+    </details>
+    <details>
+      <summary>Do I need an account?</summary>
+      <p>No. There's no sign-in, no account, and no ads. Open the app and start logging.</p>
+    </details>
+    <details>
+      <summary>Does my data sync automatically?</summary>
+      <p>iCloud sync is optional. Turn it on in Settings and your records sync privately through your own iCloud account across your devices. If you leave it off, your data stays only on the device you're using.</p>
+    </details>
+    <details>
+      <summary>What happens if I get a new phone?</summary>
+      <p>If iCloud sync was on, your records carry over automatically when you sign into the same Apple Account. If it was off, restore from your device's own backup — Coopr doesn't run separate servers, so there's nothing on our end to recover from.</p>
+    </details>
+    <details>
+      <summary>Which birds does Coopr support?</summary>
+      <p>Chickens, ducks, quail, turkeys, and geese — any backyard poultry, in as many coops as your plan allows.</p>
+    </details>
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Know what your eggs really cost</h2>
+  <a class="badge" href="https://apps.apple.com/app/coopr-egg-tracking/id6780037275">Download free for iPhone and iPad</a>
+</div>
 
 <section class="support" id="support">
   <h2>Support</h2>
@@ -74,7 +208,7 @@
   <p><strong>What we collect: nothing.</strong> Coopr has no accounts, no analytics SDKs, no ads, and no tracking. We never see your flock records, egg logs, expenses, or sales.</p>
   <p><strong>Where your data lives.</strong> All data is stored on your device. If you enable iCloud sync, your data is also stored in your personal iCloud account, protected by Apple's iCloud security. We have no access to it.</p>
   <p><strong>Purchases.</strong> Coopr Plus purchases are processed entirely by Apple. We receive no personal information about you.</p>
-  <p><strong>Export.</strong> You can export your data as CSV at any time from the More tab.</p>
+  <p><strong>Export.</strong> Coopr Plus lets you export your data as CSV at any time from the More tab.</p>
   <p><strong>Children.</strong> Coopr does not collect data from anyone, including children.</p>
   <p><strong>Changes.</strong> If this policy ever changes, the update will appear here with a new date.</p>
 </section>
