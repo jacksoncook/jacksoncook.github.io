@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coopr | Egg Tracking App for Backyard Chickens</title>
+<title>Coopr - Egg Tracking</title>
 <meta name="description" content="Coopr is a free egg tracking app for backyard chicken, duck, and quail keepers. Log daily collections in two taps, follow laying trends, and see your true cost per egg. No account required.">
 <link rel="canonical" href="https://jacksoncook.github.io/coopr/">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -12,11 +12,11 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Coopr">
 <meta property="og:url" content="https://jacksoncook.github.io/coopr/">
-<meta property="og:title" content="Coopr | Egg Tracking App for Backyard Chickens">
+<meta property="og:title" content="Coopr - Egg Tracking">
 <meta property="og:description" content="Log daily egg collections, follow laying trends, and see your true cost per egg. For backyard chicken, duck, and quail keepers.">
 <meta property="og:image" content="https://jacksoncook.github.io/coopr/img/hero-eggs.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Coopr | Egg Tracking App for Backyard Chickens">
+<meta name="twitter:title" content="Coopr - Egg Tracking">
 <meta name="twitter:description" content="Log daily egg collections, follow laying trends, and see your true cost per egg. For backyard chicken, duck, and quail keepers.">
 <meta name="twitter:image" content="https://jacksoncook.github.io/coopr/img/hero-eggs.png">
 
@@ -38,22 +38,25 @@
 </script>
 
 <style>
-  :root { --orange:#E8632C; --light:#FFA94D; --cream:#FFF6E5; --ink:#2B1D12; }
+  :root { --orange:#E8632C; --orange-deep:#9C3812; --orange-link:#B5441A; --hero-top:#C94A17; --hero-bottom:#9C3812; --light:#FFA94D; --cream:#FFF6E5; --ink:#2B1D12; --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif; }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { overflow-x:hidden; }
   body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; color:var(--ink); background:var(--cream); line-height:1.6; overflow-x:hidden; }
   img { max-width:100%; height:auto; display:block; }
-  .hero { background:linear-gradient(180deg,var(--light),var(--orange)); color:#fff; padding:56px 24px 64px; }
+  .hero { background:linear-gradient(180deg,var(--hero-top),var(--hero-bottom)); color:#fff; padding:56px 24px 64px; }
+  h1, h2, h3 { font-family:var(--serif); letter-spacing:-.01em; }
+  :focus-visible { outline:3px solid var(--ink); outline-offset:3px; border-radius:4px; }
+  .hero :focus-visible, .cta-band :focus-visible { outline-color:#fff; }
   .hero-inner { max-width:980px; margin:0 auto; display:flex; align-items:center; gap:48px; flex-wrap:wrap; }
   .hero-copy { flex:1 1 360px; min-width:0; }
-  .hero-copy .brand { display:flex; align-items:center; gap:10px; margin-bottom:20px; opacity:.9; }
+  .hero-copy .brand { display:flex; align-items:center; gap:10px; margin-bottom:20px; }
   .hero-copy .brand svg { width:32px; height:32px; border-radius:8px; }
   .hero-copy .brand span { font-weight:700; letter-spacing:.02em; }
   .hero h1 { font-size:2.3rem; line-height:1.15; margin-bottom:14px; }
-  .hero p.tag { font-size:1.1rem; opacity:.95; max-width:480px; margin-bottom:24px; }
+  .hero p.tag { font-size:1.1rem; max-width:480px; margin-bottom:24px; }
   .badge { display:inline-block; background:#000; color:#fff; padding:12px 28px; border-radius:12px; text-decoration:none; font-weight:600; }
   .hero-shot { flex:0 1 320px; min-width:0; text-align:center; }
-  .hero-shot img { width:100%; max-width:300px; border-radius:22px; box-shadow:0 20px 48px rgba(0,0,0,.35); }
+  .hero-shot img { width:100%; max-width:300px; margin:0 auto; border-radius:22px; box-shadow:0 20px 48px rgba(0,0,0,.35); }
   section { max-width:860px; margin:0 auto; padding:48px 24px; }
   section + section { padding-top:0; }
   h2 { font-size:1.6rem; margin-bottom:16px; color:var(--orange); }
@@ -61,29 +64,36 @@
   .card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 2px 8px rgba(0,0,0,.06); }
   .card h3 { font-size:1.05rem; margin-bottom:6px; }
   .card p { font-size:.95rem; color:#5a4a3a; }
-  .plus-tag { display:inline-block; font-size:.7rem; font-weight:700; color:var(--orange); background:#FFE7CF; border-radius:6px; padding:2px 6px; margin-left:6px; vertical-align:middle; }
+  .plus-tag { display:inline-block; font-size:.7rem; font-weight:700; color:var(--orange-deep); background:#FFE7CF; border-radius:6px; padding:2px 6px; margin-left:6px; vertical-align:middle; }
   .shots { display:flex; gap:24px; flex-wrap:wrap; justify-content:center; }
   .shots figure { flex:1 1 280px; min-width:0; max-width:340px; }
   .shots img { width:100%; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.12); display:block; }
   .shots figcaption { text-align:center; font-size:.9rem; color:#5a4a3a; margin-top:10px; }
   table.pricing { width:100%; border-collapse:collapse; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.06); }
   table.pricing th, table.pricing td { padding:12px 16px; text-align:left; border-bottom:1px solid #F0E2CC; font-size:.95rem; }
-  table.pricing th { background:#FFF0DA; color:var(--orange); }
+  table.pricing th { background:#FFF0DA; color:var(--orange-deep); }
   table.pricing td.check { text-align:center; }
   table.pricing tr:last-child td { border-bottom:none; }
   .faq details { background:#fff; border-radius:12px; padding:14px 18px; margin-bottom:10px; box-shadow:0 2px 8px rgba(0,0,0,.05); }
-  .faq summary { font-weight:600; cursor:pointer; }
+  .faq summary { font-weight:600; cursor:pointer; min-height:44px; display:flex; align-items:center; margin:-14px -18px; padding:14px 18px; }
+  .faq details[open] summary { margin-bottom:0; }
   .faq p { margin-top:8px; font-size:.95rem; color:#5a4a3a; }
-  .cta-band { background:var(--orange); color:#fff; text-align:center; padding:48px 24px; }
+  .cta-band { background:var(--hero-top); color:#fff; text-align:center; padding:48px 24px; }
   .cta-band h2 { color:#fff; }
   .cta-band .badge { background:#000; margin-top:8px; }
-  footer { text-align:center; padding:32px; font-size:.85rem; color:#8a755f; }
+  footer { text-align:center; padding:32px; font-size:.85rem; color:#6b5744; }
+  footer .social { margin-top:10px; display:flex; justify-content:center; gap:20px; }
+  footer .social a { display:inline-flex; align-items:center; min-height:44px; padding:0 8px; font-weight:600; }
   .privacy p, .support p { margin-bottom:12px; }
-  a { color:var(--orange); }
+  a { color:var(--orange-link); }
   @media (max-width:640px){
     .hero-inner{ flex-direction:column; text-align:center; }
     .hero-copy, .hero-shot { flex:none; width:100%; }
     .hero p.tag{ margin-left:auto; margin-right:auto; }
+    .hero-copy .brand{ justify-content:center; }
+    table.pricing th, table.pricing td { padding:10px 8px; font-size:.85rem; }
+    table.pricing td:first-child, table.pricing th:first-child { width:46%; }
+    table.pricing td.check { white-space:normal; }
   }
 </style>
 </head>
@@ -214,7 +224,13 @@
   <p><strong>Changes.</strong> If this policy ever changes, the update will appear here with a new date.</p>
 </section>
 
-<footer>© 2026 Coopr · Made with 🐔 by an indie flock keeper</footer>
+<footer>
+  <div>© 2026 Coopr - Egg Tracking · Made with 🐔 by an indie flock keeper</div>
+  <nav class="social" aria-label="Social">
+    <a href="https://www.instagram.com/coopr_app" rel="me noopener" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@coopr4you" rel="me noopener" target="_blank">TikTok</a>
+  </nav>
+</footer>
 
 </body>
 </html>
